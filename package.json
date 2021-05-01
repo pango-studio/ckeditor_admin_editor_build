@@ -1,5 +1,5 @@
 {
-  "name": "@pango-studio/ckeditor_custom_build",
+  "name": "@pango-studio/ckeditor_admin_editor_build",
   "scripts": {
     "build": "webpack --mode production",
     "preversion": "npm run build",
