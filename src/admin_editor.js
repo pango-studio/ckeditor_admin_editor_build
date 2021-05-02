@@ -79,6 +79,7 @@ AdminEditor.defaultConfig = {
 			'mediaEmbed',
 			'undo',
 			'redo',
+			'|',
 			'InsertDynamicText',
 		],
 	},
