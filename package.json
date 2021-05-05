@@ -33,7 +33,7 @@
     "@ckeditor/ckeditor5-paste-from-office": "^27.1.0",
     "@ckeditor/ckeditor5-table": "^27.1.0",
     "@ckeditor/ckeditor5-typing": "^27.1.0",
-    "@pango-studio/ckeditor_dynamic_text": "^1.0.3"
+    "@pango-studio/ckeditor_dynamic_text": "^1.0.4"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-core": "^27.1.0",
