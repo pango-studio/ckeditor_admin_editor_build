@@ -9,6 +9,7 @@ import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote'
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder'
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage'
 import Heading from '@ckeditor/ckeditor5-heading/src/heading'
+import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
 import Image from '@ckeditor/ckeditor5-image/src/image'
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption'
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle'
@@ -41,6 +42,7 @@ AdminEditor.builtinPlugins = [
 	CloudServices,
 	EasyImage,
 	Heading,
+	HtmlEmbed,
 	Image,
 	ImageCaption,
 	ImageStyle,
@@ -73,6 +75,7 @@ AdminEditor.defaultConfig = {
 			'outdent',
 			'indent',
 			'|',
+			'htmlEmbed',
 			'uploadImage',
 			'blockQuote',
 			'insertTable',
