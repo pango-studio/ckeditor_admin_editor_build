@@ -1,7 +1,3 @@
-'use strict'
-
-/* eslint-env node */
-
 const path = require('path')
 const webpack = require('webpack')
 const { bundler, styles } = require('@ckeditor/ckeditor5-dev-utils')
@@ -19,7 +15,7 @@ module.exports = {
 		library: 'AdminEditor',
 
 		path: path.resolve(__dirname, 'build'),
-		filename: 'admin_editor.js',
+		filename: 'admineditor.js',
 		libraryTarget: 'umd',
 		libraryExport: 'default',
 	},
@@ -29,7 +25,7 @@ module.exports = {
 			new TerserPlugin({
 				sourceMap: true,
 				terserOptions: {
-					output: {
+					format: {
 						// Preserve CKEditor 5 license comments.
 						comments: /^!/,
 					},
@@ -70,16 +66,19 @@ module.exports = {
 							},
 						},
 					},
+					'css-loader',
 					{
 						loader: 'postcss-loader',
-						options: styles.getPostCssConfig({
-							themeImporter: {
-								themePath: require.resolve(
-									'@ckeditor/ckeditor5-theme-lark'
-								),
-							},
-							minify: true,
-						}),
+						options: {
+							postcssOptions: styles.getPostCssConfig({
+								themeImporter: {
+									themePath: require.resolve(
+										'@ckeditor/ckeditor5-theme-lark'
+									),
+								},
+								minify: true,
+							}),
+						},
 					},
 				],
 			},
